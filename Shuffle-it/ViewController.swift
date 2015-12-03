@@ -11,7 +11,7 @@ import Foundation
 
 var arr:NSArray? = NSArray();
 
-class ViewController: UIViewController, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     //var arr:NSArray? = NSArray();
@@ -34,34 +34,63 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //pragma mark - UICollectionViewDataSource
-   // #pragma mark - UICollectionViewDataSource
+    
+    // - UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1;
+        return imagesArray.count;
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfSectionsInCollectionView section: Int) -> Int {
-        return 1;
-    }
+    
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell:UICollectionViewCell = UICollectionViewCell()
+        let cell:CollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("ItemIdentifier", forIndexPath: indexPath) as! CollectionViewCell
         
+        cell.imageView = imagesArray[indexPath.item] as! UIImageView
+        cell.imageName = imageNamesArray[indexPath.item] as! NSString
+       
         return cell;
     }
-    
-    
     /*
-    - (NSInteger)collectionView:(UICollectionView*)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.imagesArray count];
+    optional func numberOfSectionsInCollectionView(_ collectionView: UICollectionView) -> Int
+    {
+    
+    }
+    */
+    
+    //  - UICollectionViewDelegate
+    optional func collectionView(_ collectionView: UICollectionView,
+        didSelectItemAtIndexPath indexPath: NSIndexPath)
+    {
+        let selectedImageView = imagesArray[indexPath.item]
+        print("selected \(selectedImageView)")
+    }
+    optional func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)
+    {
+        print("scrollView did end deceleration")
+        printCurrentCard()
     }
     
-    -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+    optional func scrollViewDidEndDragging(_ scrollView: UIScrollView,
+        willDecelerate decelerate: Bool){
+            
+            if(!decelerate)
+            {
+                print("scrollViewDidEndDragging")
+                printCurrentCard()
+            }
+    }
+    func printCurrentCard()
     {
-    RVCollectionViewCell *cell = (RVCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"ItemIdentifier" forIndexPath:indexPath];
-    cell.imageView = self.imagesArray[indexPath.item];
-    cell.imageName = self.imageNamesArray[indexPath.item];
-    return cell;
-    }*/
+        let visibleCards: NSArray = collectionView.visibleCells()
+        //var idx
+        visibleCards.enumerateObjectsUsingBlock({ visibleCell, idx, stop in
+                //let image = visibleCell as CollectionViewCell
+            print("visible cell: \(visibleCell.imageName)")
+        
+        })
+        
+    }
+    
+    //var arrayOfImages: NSArray = [UIImage(imageLiteral : "2.png"), ]
 
 
 }
