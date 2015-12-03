@@ -15,6 +15,8 @@
 		610860811BE69B1600E48860 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6108607F1BE69B1600E48860 /* LaunchScreen.storyboard */; };
 		6108608C1BE69B1600E48860 /* Shuffle_itTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6108608B1BE69B1600E48860 /* Shuffle_itTests.swift */; };
 		610860971BE69B1600E48860 /* Shuffle_itUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610860961BE69B1600E48860 /* Shuffle_itUITests.swift */; };
+		80414CA91C0FD3CB0094CFD6 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80414CA81C0FD3CB0094CFD6 /* CustomView.swift */; };
+		80414CAB1C0FE32E0094CFD6 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 80414CAA1C0FE32E0094CFD6 /* Images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		610860921BE69B1600E48860 /* Shuffle-itUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shuffle-itUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		610860961BE69B1600E48860 /* Shuffle_itUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shuffle_itUITests.swift; sourceTree = "<group>"; };
 		610860981BE69B1600E48860 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80414CA81C0FD3CB0094CFD6 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		80414CAA1C0FE32E0094CFD6 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				610860731BE69B1600E48860 /* AppDelegate.swift */,
 				610860751BE69B1600E48860 /* ViewController.swift */,
 				610860771BE69B1600E48860 /* Main.storyboard */,
+				80414CA81C0FD3CB0094CFD6 /* CustomView.swift */,
+				80414CAA1C0FE32E0094CFD6 /* Images */,
 				6108607D1BE69B1600E48860 /* Assets.xcassets */,
 				6108607F1BE69B1600E48860 /* LaunchScreen.storyboard */,
 				610860821BE69B1600E48860 /* Info.plist */,
@@ -235,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80414CAB1C0FE32E0094CFD6 /* Images in Resources */,
 				610860811BE69B1600E48860 /* LaunchScreen.storyboard in Resources */,
 				6108607E1BE69B1600E48860 /* Assets.xcassets in Resources */,
 				610860791BE69B1600E48860 /* Main.storyboard in Resources */,
@@ -265,6 +272,7 @@
 				610860761BE69B1600E48860 /* ViewController.swift in Sources */,
 				610860741BE69B1600E48860 /* AppDelegate.swift in Sources */,
 				6108607C1BE69B1600E48860 /* Shuffle_it.xcdatamodeld in Sources */,
+				80414CA91C0FD3CB0094CFD6 /* CustomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +499,7 @@
 				6108609D1BE69B1600E48860 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6108609E1BE69B1600E48860 /* Build configuration list for PBXNativeTarget "Shuffle-itTests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +508,7 @@
 				610860A01BE69B1600E48860 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		610860A11BE69B1600E48860 /* Build configuration list for PBXNativeTarget "Shuffle-itUITests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +517,7 @@
 				610860A31BE69B1600E48860 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
