@@ -18,13 +18,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     var imagesArray = NSMutableArray(array: arr!)
     var imageNamesArray = NSMutableArray(array: arr!)
+    //var collectionViewLayout = CollectionViewLayout()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //let username = CustomView(frame:CGRect(x:15, y:UIApplication.sharedApplication().statusBarFrame.size.height + 15, width:view.frame.size.width-30, height:40))
-        //username.setLabelText("Username", labelFont: UIFont(name: "Helvetica",size: 14)!, textFieldFont: UIFont(name: "Helvetica",size: 14)!)
-        //view.addSubview(username)
+        initImages()
+        //collectionView.registerClass(CollectionViewCell, forCellWithReuseIdentifier: "ItemIdentifier")
+        collectionView.indicatorStyle = UIScrollViewIndicatorStyle.White
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+        
+        
         
         
     }
@@ -58,13 +64,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     //  - UICollectionViewDelegate
     optional func collectionView(_ collectionView: UICollectionView,
-        didSelectItemAtIndexPath indexPath: NSIndexPath)
-    {
+        didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let selectedImageView = imagesArray[indexPath.item]
         print("selected \(selectedImageView)")
     }
-    optional func scrollViewDidEndDecelerating(_ scrollView: UIScrollView)
-    {
+    optional func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         print("scrollView did end deceleration")
         printCurrentCard()
     }
@@ -72,14 +76,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     optional func scrollViewDidEndDragging(_ scrollView: UIScrollView,
         willDecelerate decelerate: Bool){
             
-            if(!decelerate)
-            {
+            if(!decelerate) {
                 print("scrollViewDidEndDragging")
                 printCurrentCard()
             }
     }
-    func printCurrentCard()
-    {
+    func printCurrentCard() {
         let visibleCards: NSArray = collectionView.visibleCells()
         //var idx
         visibleCards.enumerateObjectsUsingBlock({ visibleCell, idx, stop in
@@ -88,6 +90,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         })
         
+    }
+    
+    func initImages() {
+        var imageNames:NSArray = ["2.png", "3.png", "4.png", "5.png","6.png","7.png","8.png","9.png","10.png","11.png","12.png", "13.png", "14.png"]
+        
+        
+        for var i = 0, j = 0; i < imageNames.count * 3; ++i, ++j {
+            var imageName = imageNames[j % imageNames.count] as! String
+            imageNamesArray[i] = imageName
+            imagesArray.addObject(UIImageView(image: UIImage(contentsOfFile: imageName)))
+        }
+        
+
     }
     
     //var arrayOfImages: NSArray = [UIImage(imageLiteral : "2.png"), ]
