@@ -18,6 +18,7 @@
 		80414CA91C0FD3CB0094CFD6 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80414CA81C0FD3CB0094CFD6 /* CustomView.swift */; };
 		80414CAB1C0FE32E0094CFD6 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 80414CAA1C0FE32E0094CFD6 /* Images */; };
 		80524FD31C10B1AD00C0E5E0 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80524FD21C10B1AD00C0E5E0 /* CollectionViewCell.swift */; };
+		80C7839D1C1201320021B9BB /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C7839C1C1201320021B9BB /* CollectionViewLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		80414CA81C0FD3CB0094CFD6 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		80414CAA1C0FE32E0094CFD6 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		80524FD21C10B1AD00C0E5E0 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		80C7839C1C1201320021B9BB /* CollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				80524FD21C10B1AD00C0E5E0 /* CollectionViewCell.swift */,
 				610860771BE69B1600E48860 /* Main.storyboard */,
 				80414CA81C0FD3CB0094CFD6 /* CustomView.swift */,
+				80C7839C1C1201320021B9BB /* CollectionViewLayout.swift */,
 				80414CAA1C0FE32E0094CFD6 /* Images */,
 				6108607D1BE69B1600E48860 /* Assets.xcassets */,
 				6108607F1BE69B1600E48860 /* LaunchScreen.storyboard */,
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80C7839D1C1201320021B9BB /* CollectionViewLayout.swift in Sources */,
 				80524FD31C10B1AD00C0E5E0 /* CollectionViewCell.swift in Sources */,
 				610860761BE69B1600E48860 /* ViewController.swift in Sources */,
 				610860741BE69B1600E48860 /* AppDelegate.swift in Sources */,

@@ -9,16 +9,16 @@
 import UIKit
 import Foundation
 
-var arr:NSArray? = NSArray();
+//var arr:NSArray? = NSArray();
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
     //var arr:NSArray? = NSArray();
     
-    var imagesArray = NSMutableArray(array: arr!)
-    var imageNamesArray = NSMutableArray(array: arr!)
-    //var collectionViewLayout = CollectionViewLayout()
+    var imagesArray:NSMutableArray = []
+    var imageNamesArray: NSMutableArray = []
+    var collectionViewLayout = CollectionViewLayout()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.indicatorStyle = UIScrollViewIndicatorStyle.White
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+        collectionView.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         
         
         
